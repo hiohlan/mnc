@@ -19,6 +19,9 @@ wget https://github.com/hiohlan/kiimo/raw/main/output/Manoonchai/Manoonchai_xkb 
 มีแบบอย่าง 3 แบบให้เลือกใช้ตามความเหมาะสมของระบบของคุณ:
 ## ➊ แบบ `setxkbmap`, สำหรับเซสชัน X ปัจจุบันเท่านั้น
 เหมาะสำหรับผู้ที่ไม่เข้าถึงสิทธิ Super User หรือไม่อยากไปยุ่งอะไรกับไฟล์ระบบ
+>⚠️ หมายเหตุ: ตอนนี้ผู้เขียนใช้วิธีนี้กับ GNOME Shell (Wayland) ไม่ได้;  
+ให้ใช้วิธีถัดไปแทน หากท่านมีวิธีแก้จักขอบคุณยิ่ง
+
 1. ติดตั้งลงในโฟลเดอร์ผู้ใช้  
     ```
     mkdir -p $HOME/.xkb/symbols;
@@ -83,6 +86,9 @@ Replace all instances of `Manoonchai_xkb` in any commands with the actual name o
 There are 3 methods depending on your system and needs:
 ## ➊ Using `setxkbmap` (for the current X session only)
 Best if you don’t have superuser privileges or don’t want to touch system files
+>⚠️ Note: This method currently does not work for the author when using GNOME Shell on Wayland.  
+Please consider the next method instead.  
+If you know a workaround — your contribution would be most appreciated!  
 1. Install to your user directory:  
     ```
     mkdir -p $HOME/.xkb/symbols;
