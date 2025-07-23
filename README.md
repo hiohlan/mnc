@@ -40,11 +40,11 @@ wget https://github.com/hiohlan/kiimo/raw/main/output/Manoonchai/Manoonchai_xkb 
     ```
 2. แปลงให้เป็นไฟล์รันได้  
     ```
-    chmod +x installmanoonchai.sh
+    chmod +x ./installmanoonchai.sh
     ```
 3. ติดตั้งแป้นพิมพ์  
     ```
-    sudo installmanoonchai.sh Manoonchai_xkb
+    sudo ./installmanoonchai.sh Manoonchai_xkb
     ```
 4. เพื่อความมั่นใจ ควร logout จาก X, หรือ restart ด้วยก็ดี
 5. ไปที่ Keyboard setting, มองหา/เพิ่ม `Thai (Manoonchai v1.0)`.  
@@ -104,11 +104,11 @@ Best for users with superuser privileges who want to keep the existing Thai layo
     ```
 2. Make it executable:  
     ```
-    chmod +x installmanoonchai.sh
+    chmod +x ./installmanoonchai.sh
     ```
 3. Install the keyboard layout:  
     ```
-    sudo installmanoonchai.sh Manoonchai_xkb
+    sudo ./installmanoonchai.sh Manoonchai_xkb
     ```
 4. For best results, log out of your X session or restart your system.
 5. Go to your keyboard settings and look for/add `Thai (Manoonchai v1.0)`  
