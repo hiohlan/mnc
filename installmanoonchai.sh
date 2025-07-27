@@ -17,12 +17,16 @@ fi
 
 echo "Installing from layout file: $LAYOUT_FILE"
 
-# Backup existing XKB files
-cp /usr/share/X11/xkb/symbols/th /usr/share/X11/xkb/symbols/th.bak
-cp /usr/share/X11/xkb/rules/evdev.xml /usr/share/X11/xkb/rules/evdev.xml.bak
-cp /usr/share/X11/xkb/rules/base.xml /usr/share/X11/xkb/rules/base.xml.bak
-cp /usr/share/X11/xkb/rules/evdev.lst /usr/share/X11/xkb/rules/evdev.lst.bak
-cp /usr/share/X11/xkb/rules/base.lst /usr/share/X11/xkb/rules/base.lst.bak && echo "Backups created."
+# Timestamp for backup filenames
+TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+
+# Backup existing XKB files with timestamp
+cp /usr/share/X11/xkb/symbols/th "/usr/share/X11/xkb/symbols/th.$TIMESTAMP.bak"
+cp /usr/share/X11/xkb/rules/evdev.xml "/usr/share/X11/xkb/rules/evdev.xml.$TIMESTAMP.bak"
+cp /usr/share/X11/xkb/rules/base.xml "/usr/share/X11/xkb/rules/base.xml.$TIMESTAMP.bak"
+cp /usr/share/X11/xkb/rules/evdev.lst "/usr/share/X11/xkb/rules/evdev.lst.$TIMESTAMP.bak"
+cp /usr/share/X11/xkb/rules/base.lst "/usr/share/X11/xkb/rules/base.lst.$TIMESTAMP.bak"
+echo "Backups created with timestamp $TIMESTAMP."
 
 # Extract layout ID and description from the layout file
 LAYOUT_ID=$(grep -Po 'xkb_symbols\s+"(\K[^"]+)' "$LAYOUT_FILE" | head -1)
